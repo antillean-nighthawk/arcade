@@ -1,0 +1,97 @@
+<!-- Original by:  https://github.com/jelofsson/hangman.js -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+
+    <link rel="stylesheet" href="hangman.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="hangman.js"></script>
+</head>
+
+<body>
+<!-- Navbar -->
+<script src="navbar.js"></script>
+
+<!-- Page content -->
+<h1>Hangman  
+    <button type="button" class="btn btn-primary" onclick="Hangman.reset(); return false;">
+        New Game <span class="badge badge-light"></span>
+    </button>
+</h1>
+
+<div id="hangm">
+    <div style="height: 3em; margin-bottom: 3em;">
+        <div id="hangm_end" class="h"></div>
+    </div>
+
+    <div id="hangm_animation">
+        <div id="hangm_2" class="h pole_h"></div>
+        <div id="hangm_1" class="h pole_v"></div>
+
+        <div id="hangm_3" class="h rope"></div>
+
+        <div id="hangm_4" class="h man_head"></div>
+        <div id="hangm_5" class="h man_upper"></div>
+        <div id="hangm_6" class="h man_lower"></div>
+    </div>
+
+    <div style="height: 2em">
+        <div id="hangm_guesses" class="h"></div>
+    </div>
+
+    <form>
+        <div id="hangm_guessbox" style="height: 8em;" class="h">
+            <div style="height: 4em;">
+                Guess the word:<div id="hangm_word"></div>
+            </div>
+
+            <!-- inspired by https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/ -->
+            <div id="keyboard-cont">
+                <div class="first-row">
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('q'); this.value=''; return false;">q</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('w'); this.value=''; return false;">w</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('e'); this.value=''; return false;">e</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('r'); this.value=''; return false;">r</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('t'); this.value=''; return false;">t</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('y'); this.value=''; return false;">y</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('u'); this.value=''; return false;">u</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('i'); this.value=''; return false;">i</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('o'); this.value=''; return false;">o</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('p'); this.value=''; return false;">p</button>
+                </div>
+                <div class="second-row">
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('a'); this.value=''; return false;">a</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('s'); this.value=''; return false;">s</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('d'); this.value=''; return false;">d</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('f'); this.value=''; return false;">f</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('g'); this.value=''; return false;">g</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('h'); this.value=''; return false;">h</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('j'); this.value=''; return false;">j</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('k'); this.value=''; return false;">k</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('l'); this.value=''; return false;">l</button>
+                </div>
+                <div class="third-row">
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('z'); this.value=''; return false;">z</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('x'); this.value=''; return false;">x</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('c'); this.value=''; return false;">c</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('v'); this.value=''; return false;">v</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('b'); this.value=''; return false;">b</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('n'); this.value=''; return false;">n</button>
+                    <button class="keyboard-button" id="guess" onclick="Hangman.guess('m'); this.value=''; return false;">m</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>

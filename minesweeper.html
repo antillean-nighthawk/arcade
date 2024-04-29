@@ -1,0 +1,72 @@
+<!-- Original by: https://github.com/nickarocho/minesweeper/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+
+    <link rel="stylesheet" href="minesweeper.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>   
+<!-- Navbar -->
+<script src="navbar.js"></script>
+
+<!-- Page content -->
+<h1>Minesweeper</h1>
+
+<div class="flex-container">
+    <!-- Sidebar -->
+    <ul class="nav flex-column">
+        <!-- Counters -->
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Bombs: <span id="bomb-counter">000</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Timer: <span id="timer">000</span></a>
+        </li>
+
+        <!-- Reset and difficulty selection buttons -->
+        <li class="nav-item">
+            <a class="nav-link" href="#">Reset 
+                <button type="button" class="btn btn-link" id="reset">&circlearrowleft;</button>
+            </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Difficulty</a>
+        </li>
+        <li class="nav-item">
+            <div id="size-btns">
+                <button id="size-9" class="btn btn-link">Easy</button>
+            </div> 
+        </li>
+        <li class="nav-item">
+            <div id="size-btns">
+                <button id="size-16" class="btn btn-link" onclick="window.location.reload();">Medium</button>
+            </div> 
+        </li>
+
+        <!-- Flag help text -->
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#"><em>"Shift + Click"</em></strong><br> to toggle flags</a>
+        </li>
+    </ul>
+
+    <!-- Dynamically generated minefield using JS -->
+    <table id="board"></table>
+</div>
+
+
+<script src="minesweeper.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!-- Coded by me -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="rock-paper-scissors.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <script src="rock-paper-scissors.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<!-- Navbar -->
+<script src="navbar.js"></script>
+
+<!-- Page content -->
+<h1>Rock-Paper-Scissors</h1>
+
+<div class="gameboard">
+    <div class="scoreboard">
+        <h2>Player Choice</h2>
+        <h3 id="player-score">Score: 0</h3>
+    </div>
+
+    <div class="options">
+        <button type="button" id="player-rock" onclick="playRound('rock')">
+            rock   <br>
+            <span class="material-icons">hexagon</span>
+        </button>
+        <button type="button" id="player-paper" onclick="playRound('paper')">
+            paper <br>
+            <span class="material-icons">description</span>
+        </button>
+        <button type="button" id="player-scissors" onclick="playRound('scissors')">
+            scissors <br>
+            <span class="material-icons">content_cut</span>
+        </button>
+    </div>
+
+
+    <div class="options">
+        <button type="button" id="computer-rock">
+            rock <br>
+            <span class="material-icons">hexagon</span>
+        </button>
+        <button type="button" id="computer-paper">
+            paper <br>
+            <span class="material-icons">description</span>
+        </button>
+        <button type="button" id="computer-scissors">
+            scissors <br>
+            <span class="material-icons">content_cut</span>
+        </button>
+    </div>
+
+    <div class="scoreboard">
+        <h2>Computer Choice</h2>
+        <h3 id="computer-score">Score: 0</h3>
+    </div>
+</div>
+
+</body>
+</html>

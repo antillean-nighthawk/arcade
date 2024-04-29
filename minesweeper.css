@@ -1,0 +1,32 @@
+/* Original by: https://github.com/nickarocho/minesweeper/ */
+
+* {
+    -o-user-select: none;
+    user-select: none;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    margin: 80px 10px;
+}
+
+.revealed {
+    background-color: #C0C0C0;
+    text-align: center;
+    border-style: none;
+}
+
+td {
+    height: 25px;
+    width: 25px;
+    background-color: #C0C0C0;
+    border: 1.5px solid;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+}
+
+table {
+    border: 2px solid;
+}

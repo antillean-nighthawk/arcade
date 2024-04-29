@@ -1,0 +1,11 @@
+h1, h2, html, body {
+    text-align: center;
+}
+
+#red {
+    color: #dc3545;
+}
+
+#blue {
+    color: #007bff;
+}
